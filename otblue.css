@@ -1538,3 +1538,156 @@ select option:focus,
     background: linear-gradient(90deg, #1d4ed8 0%, #1e40af 100%) !important;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4) !important;
 }
+
+/* Revenue*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/*typography*/
+body,
+.t-PageBody,
+.t-Body-main,
+.t-Body-content,
+.t-Region-body {
+    background-color: #0b0f19 !important;
+    background: #0b0f19 !important;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    color: #ffffff !important;
+}
+
+/* Page Header & Titles */
+.t-Header,
+.t-Header-branding,
+.t-BreadcrumbRegion,
+.t-HeroRegion {
+    background-color: #0b0f19 !important;
+    background: #0b0f19 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+.t-Breadcrumb-item,
+.t-Header-logoText {
+    color: #ffffff !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+/*regions and cards*/
+.t-Region,
+.t-Region-header,
+.t-Region-body,
+.t-Region-content,
+.t-Region-footer,
+.t-Card {
+    background-color: rgba(17, 24, 39, 0.85) !important;
+    background: rgba(17, 24, 39, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+    color: #ffffff !important;
+}
+
+.t-Region-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 16px 20px !important;
+    border-top-left-radius: 14px !important;
+    border-top-right-radius: 14px !important;
+}
+
+.t-Region-title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    letter-spacing: -0.3px !important;
+}
+
+/*chart value styling*/
+.oj-chart text,
+.oj-chart tspan,
+.oj-chart-title,
+.oj-chart-title text,
+.oj-chart-legend-item-text,
+.oj-chart-axis-title,
+.oj-chart-axis-title text,
+.oj-chart-tick-label,
+.oj-chart-tick-label text,
+g[class*="tick-label"] text,
+g[class*="axis-title"] text {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    opacity: 1 !important;
+}
+
+
+.oj-chart-title text {
+    fill: #38bdf8 !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+}
+
+/* Gridlines  */
+.oj-chart-scale-line,
+.oj-chart-vgrid-line,
+.oj-chart-hgrid-line {
+    stroke: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Data Tooltips */
+.oj-chart-tooltip {
+    background-color: #1f2937 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+
+.revenue-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-bottom: 10px;
+}
+
+.revenue-kpi-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.kpi-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.kpi-amount {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 8px 0 4px 0;
+}
+
+.kpi-badge {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.kpi-positive {
+    color: #34d399;
+}
+
+.kpi-neutral {
+    color: #38bdf8;
+}
