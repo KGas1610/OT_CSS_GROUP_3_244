@@ -1,0 +1,244 @@
+/* ==========================================================================
+   OT HARDWARE ENTERPRISE - GLOBAL "NEON WAVES" THEME
+   Palette: #FFF1EB (Cream) | #7360F9 (Indigo) | #B9D440 (Lime) | #BC9BF3 (Lavender)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg-cream: #FFF1EB;
+    --brand-indigo: #7360F9;
+    --brand-indigo-dark: #5B46F6;
+    --brand-lime: #B9D440;
+    --brand-lavender: #BC9BF3;
+    --text-dark: #1E1B2E;
+    --text-muted: #5E5673;
+}
+
+/* 1. Global Typography & Soft Cream Page Canvas (Excludes Login Page 9999) */
+body:not(.t-PageBody--login),
+.t-PageBody:not(.t-PageBody--login) .t-Body-main,
+.t-PageBody:not(.t-PageBody--login) .t-Body-content {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    background-color: var(--bg-cream) !important;
+    color: var(--text-dark) !important;
+}
+
+/* 2. Top Navigation Header Bar */
+.t-Header-branding {
+    background-color: #FFFFFF !important;
+    border-bottom: 2px solid rgba(188, 155, 243, 0.45) !important;
+    box-shadow: 0 4px 16px rgba(30, 27, 46, 0.04) !important;
+}
+
+.t-Header-logo-link {
+    color: var(--brand-indigo) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* Clean Top-Left App Logo Badge */
+.t-Header-logo img {
+    border-radius: 10px !important;
+    border: 1.5px solid var(--brand-lime) !important;
+}
+
+/* Hamburger Toggle & Top Bar User Pill */
+.t-Button--header,
+.t-Button--headerTree {
+    color: var(--text-dark) !important;
+}
+
+.t-Button--header:hover,
+.t-Button--headerTree:hover {
+    background-color: rgba(188, 155, 243, 0.25) !important;
+    color: var(--brand-indigo) !important;
+}
+
+/* 3. Left Navigation Sidebar (Deep Indigo-Charcoal with Lime & Indigo Accents) */
+.t-Body-nav,
+.t-TreeNav {
+    background-color: var(--text-dark) !important;
+    border-right: 1.5px solid rgba(188, 155, 243, 0.25) !important;
+}
+
+.t-TreeNav .a-TreeView-node--topLevel>.a-TreeView-row,
+.t-TreeNav .a-TreeView-label {
+    color: rgba(255, 241, 235, 0.82) !important;
+    font-weight: 600 !important;
+    border-radius: 12px !important;
+    transition: all 0.2s ease !important;
+}
+
+.t-TreeNav .a-TreeView-node--topLevel .a-TreeView-icon {
+    color: var(--brand-lavender) !important;
+}
+
+/* Hover State on Sidebar Links */
+.t-TreeNav .a-TreeView-content:hover .a-TreeView-label {
+    color: #FFFFFF !important;
+}
+
+.t-TreeNav .a-TreeView-row.is-hover {
+    background-color: rgba(115, 96, 249, 0.22) !important;
+}
+
+/* Active Page Link in Sidebar (Electric Indigo Pill + Acid Lime Icon) */
+.t-TreeNav .a-TreeView-row.is-current,
+.t-TreeNav .a-TreeView-row.is-selected {
+    background: linear-gradient(135deg, var(--brand-indigo) 0%, var(--brand-indigo-dark) 100%) !important;
+    box-shadow: 0 6px 16px rgba(115, 96, 249, 0.35) !important;
+}
+
+.t-TreeNav .a-TreeView-row.is-current+.a-TreeView-content .a-TreeView-label,
+.t-TreeNav .a-TreeView-content.is-current .a-TreeView-label {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+.t-TreeNav .a-TreeView-content.is-current .a-TreeView-icon {
+    color: var(--brand-lime) !important;
+}
+
+/* 4. Page Title / Hero Banner */
+.t-Body-title {
+    background-color: transparent !important;
+    border-bottom: 1.5px solid rgba(188, 155, 243, 0.45) !important;
+}
+
+.t-HeroRegion-title,
+.t-Breadcrumb-label {
+    color: var(--text-dark) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* 5. Region Cards & Containers */
+.t-Region {
+    background-color: #FFFFFF !important;
+    border: 1.5px solid rgba(188, 155, 243, 0.55) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(30, 27, 46, 0.05) !important;
+    overflow: hidden;
+}
+
+.t-Region-header {
+    background-color: rgba(255, 241, 235, 0.55) !important;
+    border-bottom: 1.5px solid rgba(188, 155, 243, 0.35) !important;
+    padding: 14px 20px !important;
+}
+
+.t-Region-title {
+    color: var(--brand-indigo) !important;
+    font-weight: 800 !important;
+    font-size: 1.05rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* 6. Buttons (Primary Hot = Electric Indigo, Secondary = Acid Lime) */
+.t-Button--hot {
+    background: linear-gradient(135deg, var(--brand-indigo) 0%, var(--brand-indigo-dark) 100%) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    box-shadow: 0 6px 16px rgba(115, 96, 249, 0.28) !important;
+    transition: transform 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+.t-Button--hot:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(115, 96, 249, 0.38), 0 0 0 2px var(--brand-lime) !important;
+}
+
+/* Standard / Secondary Action Buttons */
+.t-Button:not(.t-Button--hot):not(.t-Button--header):not(.t-Button--noUI) {
+    background-color: var(--bg-cream) !important;
+    border: 1.5px solid var(--brand-lavender) !important;
+    border-radius: 12px !important;
+    color: var(--text-dark) !important;
+    font-weight: 700 !important;
+    transition: all 0.18s ease !important;
+}
+
+.t-Button:not(.t-Button--hot):not(.t-Button--header):not(.t-Button--noUI):hover {
+    background-color: var(--brand-lime) !important;
+    border-color: #A4C229 !important;
+    color: var(--text-dark) !important;
+}
+
+/* 7. Form Inputs, Select Lists & Focus States */
+.apex-item-text,
+.apex-item-select,
+.apex-item-textarea,
+.apex-item-datepicker {
+    background-color: #FFFFFF !important;
+    border: 1.5px solid var(--brand-lavender) !important;
+    border-radius: 12px !important;
+    color: var(--text-dark) !important;
+    font-weight: 500 !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.apex-item-text:focus,
+.apex-item-select:focus,
+.apex-item-textarea:focus {
+    border-color: var(--brand-indigo) !important;
+    box-shadow: 0 0 0 3.5px rgba(115, 96, 249, 0.18) !important;
+}
+
+.t-Form-label {
+    color: var(--text-dark) !important;
+    font-weight: 700 !important;
+    font-size: 0.82rem !important;
+}
+
+/* 8. Interactive Reports, Classic Reports & Interactive Grids */
+.a-IRR,
+.a-IG,
+.t-Report-wrap {
+    border: 1.5px solid rgba(188, 155, 243, 0.5) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+}
+
+.a-IRR-header,
+.a-GV-header,
+.t-Report-colHead {
+    background-color: rgba(115, 96, 249, 0.08) !important;
+    color: var(--brand-indigo) !important;
+    font-weight: 800 !important;
+    border-bottom: 1.5px solid var(--brand-lavender) !important;
+}
+
+.a-IRR-table tr:hover td,
+.a-GV-row.is-hover .a-GV-cell,
+.t-Report-report tr:hover td {
+    background-color: rgba(185, 212, 64, 0.14) !important;
+}
+
+/* Selected Row Highlight in Interactive Grid */
+.a-GV-row.is-selected .a-GV-cell {
+    background-color: rgba(115, 96, 249, 0.12) !important;
+}
+
+/* 9. Utility Accent Badges (Use class="ot-badge-lime" or "ot-badge-indigo" in Reports/HTML) */
+.ot-badge-lime {
+    display: inline-block;
+    background-color: var(--brand-lime);
+    color: var(--text-dark);
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+.ot-badge-indigo {
+    display: inline-block;
+    background-color: var(--brand-indigo);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 999px;
+}
