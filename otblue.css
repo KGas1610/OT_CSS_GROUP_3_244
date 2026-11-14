@@ -1691,3 +1691,955 @@ g[class*="axis-title"] text {
 .kpi-neutral {
     color: #38bdf8;
 }
+
+/* Top Customers/ Main CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --dk-bg: #0b0f19;
+    --dk-bg-nav: #0d1322;
+    --dk-bg-panel: #111827;
+    --dk-bg-region: rgba(17, 24, 39, 0.92);
+    --dk-bg-input: rgba(255, 255, 255, 0.07);
+    --dk-bg-input-focus: rgba(30, 41, 59, 0.95);
+    --dk-border: rgba(255, 255, 255, 0.10);
+    --dk-border-soft: rgba(255, 255, 255, 0.08);
+    --dk-border-input: rgba(255, 255, 255, 0.18);
+    --dk-text: #ffffff;
+    --dk-text-body: #e5e7eb;
+    --dk-text-muted: #cbd5e1;
+    --dk-text-nav: #9ca3af;
+    --dk-accent: #38bdf8;
+    --dk-accent-bg: rgba(56, 189, 248, 0.15);
+    --dk-accent-hover: rgba(56, 189, 248, 0.12);
+    --dk-danger: #f43f5e;
+    --dk-font: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   2. TYPEFACE
+   -------------------------------------------------------------------------- */
+html,
+body,
+input,
+select,
+textarea,
+button,
+.t-Body,
+.t-Header,
+.t-Header-title,
+.t-Header-logoText,
+.t-NavigationBar-link,
+.t-Button,
+.a-Button,
+.t-Region,
+.t-Region-title,
+.t-Form-label,
+.apex-item-text,
+.apex-item-textarea,
+.apex-item-select,
+.apex-item-popup-lov,
+.a-TreeView-label,
+.a-CardView-title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.t-HeroRegion-title,
+.t-Body-title,
+/* Interactive Reports */
+.a-IRR,
+.a-IRR-table,
+.a-IRR-header,
+.a-IRR-headerLink,
+.a-IRR-pagination-label,
+.a-IRR-controlsContainer,
+.a-IRR-search-field,
+.a-IRR-button,
+.a-IRR-sortWidget,
+.a-IRR-fullView,
+.a-IRR-noDataMsg,
+.a-IRR-reportSummary,
+.a-IRR-dialog,
+.a-IRR-dialogContent,
+/* Interactive Grids */
+.a-IG,
+.a-GV,
+.a-GV-table,
+.a-GV-headerLabel,
+.a-GV-cell,
+.a-GV-pagination,
+.a-GV-footer,
+.a-Toolbar,
+.a-Toolbar-item,
+.a-Toolbar-label,
+/* Menus, popups, dialogs */
+.a-Menu,
+.a-Menu-label,
+.a-Menu-item,
+.ui-dialog,
+.ui-dialog-title,
+.ui-widget,
+.a-PopupLOV-dialog,
+.a-DatePicker,
+.ui-datepicker {
+    font-family: var(--dk-font) !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. CANVAS, HEADER, BREADCRUMBS
+   -------------------------------------------------------------------------- */
+body,
+.t-PageBody,
+.t-Body-main,
+.t-Body-content,
+.t-Body-top,
+.t-Body-title,
+.t-BreadcrumbRegion,
+.t-BreadcrumbRegion-body,
+.t-PageBody-header {
+    background: var(--dk-bg) !important;
+    color: var(--dk-text) !important;
+}
+
+/* Region bodies stay transparent so nested regions don't stack opaque on translucent */
+.t-Region-body {
+    background: transparent !important;
+    color: var(--dk-text-body) !important;
+}
+
+.t-Header,
+.t-Header-branding,
+.t-Header-nav,
+.t-Header-title {
+    background: var(--dk-bg) !important;
+    border-bottom: 1px solid var(--dk-border-soft) !important;
+}
+
+.t-Header-logo img {
+    background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.t-Header-title h1,
+.t-Header-logoText,
+.t-Breadcrumb-title,
+.t-Breadcrumb-item,
+.t-Breadcrumb-label {
+    color: var(--dk-text) !important;
+    fill: var(--dk-text) !important;
+    font-weight: 700 !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. NAVIGATION
+   -------------------------------------------------------------------------- */
+.t-Body-nav,
+.a-TreeView,
+.a-TreeView-node,
+.a-TreeView-content {
+    background: var(--dk-bg-nav) !important;
+    border-right: 1px solid var(--dk-border-soft) !important;
+}
+
+.a-TreeView-label,
+.a-TreeView-rowHeader {
+    color: var(--dk-text-nav) !important;
+    font-weight: 600 !important;
+}
+
+.a-TreeView-node:hover .a-TreeView-content,
+.a-TreeView-node.is-selected>.a-TreeView-content {
+    background: var(--dk-accent-bg) !important;
+    color: var(--dk-accent) !important;
+    border-radius: 6px !important;
+}
+
+.a-TreeView-node.is-selected .a-TreeView-label,
+.a-TreeView-node.is-selected .fa {
+    color: var(--dk-accent) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. REGIONS & CARDS
+   overflow is visible and there is no backdrop-filter, so dropdowns, popup
+   LOVs and menus are no longer clipped or hidden behind neighbouring regions.
+   -------------------------------------------------------------------------- */
+.t-Region,
+.t-Card {
+    background: var(--dk-bg-region) !important;
+    border: 1px solid var(--dk-border) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+    margin-top: 16px !important;
+    margin-bottom: 24px !important;
+    overflow: visible !important;
+}
+
+.t-Region-header {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border-bottom: 1px solid var(--dk-border-soft) !important;
+    border-radius: 14px 14px 0 0 !important;
+    padding: 16px 24px !important;
+}
+
+.t-Region-title {
+    color: var(--dk-text) !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. FORMS
+   -------------------------------------------------------------------------- */
+.t-Form-fieldContainer {
+    margin-bottom: 20px !important;
+}
+
+/* Stacked labels. Remove this block if you need "label left" layouts. */
+.t-Form-fieldContainer:not(.t-Form-fieldContainer--floatingLabel) .t-Form-labelContainer {
+    padding-bottom: 6px !important;
+    display: block !important;
+    float: none !important;
+    text-align: left !important;
+}
+
+.t-Form-fieldContainer:not(.t-Form-fieldContainer--floatingLabel) .t-Form-label {
+    color: var(--dk-text-muted) !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+.is-required .t-Form-label::before {
+    color: var(--dk-danger) !important;
+}
+
+.t-Form-inputContainer,
+.apex-item-wrapper:not(.apex-item-wrapper--checkbox):not(.apex-item-wrapper--radio) {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* All text-like inputs, textareas and selects */
+.t-Form-inputContainer input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="file"]),
+.t-Form-inputContainer textarea,
+.t-Form-inputContainer select,
+.apex-item-text,
+.apex-item-textarea,
+.apex-item-select,
+.apex-item-popup-lov {
+    background-color: var(--dk-bg-input) !important;
+    border: 1px solid var(--dk-border-input) !important;
+    color: var(--dk-text) !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    font-size: 0.95rem !important;
+    min-height: 46px !important;
+    box-sizing: border-box !important;
+}
+
+.t-Form-inputContainer textarea,
+.apex-item-textarea {
+    min-height: 96px !important;
+}
+
+/* Popup LOV: leave room for the magnifier button */
+.apex-item-group--popup-lov input.apex-item-text,
+.apex-item-popup-lov {
+    padding-right: 44px !important;
+}
+
+.t-Form-inputContainer input:focus,
+.t-Form-inputContainer textarea:focus,
+.t-Form-inputContainer select:focus,
+.apex-item-popup-lov:focus {
+    border-color: var(--dk-accent) !important;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
+    outline: none !important;
+    background-color: var(--dk-bg-input-focus) !important;
+    color: var(--dk-text) !important;
+}
+
+.t-Form-inputContainer select option {
+    background-color: var(--dk-bg-panel) !important;
+    color: var(--dk-text) !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. BUTTONS
+   -------------------------------------------------------------------------- */
+.t-Button--hot {
+    background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: var(--dk-text) !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    padding: 12px 28px !important;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35) !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease !important;
+}
+
+.t-Button--hot:hover {
+    background: linear-gradient(90deg, #1d4ed8 0%, #1e40af 100%) !important;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Keyboard focus visibility */
+.t-Button:focus-visible,
+.a-Button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--dk-accent) !important;
+    outline-offset: 2px !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. INTERACTIVE REPORTS
+   -------------------------------------------------------------------------- */
+.a-IRR,
+.a-IRR-container,
+.a-IRR-tableContainer,
+.a-IRR-table,
+.a-IRR-reportSummary,
+.a-IRR-pagination,
+.a-IRR-noDataMsg {
+    background-color: transparent !important;
+    color: var(--dk-text-body) !important;
+}
+
+/* SEARCH BAR STRIP (the white area above the table).
+   Class names vary slightly between APEX versions. If it is still white,
+   Inspect the strip, note the class that carries the white background and
+   add it to this list. */
+.a-IRR-toolbar,
+.a-IRR-search,
+.a-IRR-searchBar,
+.a-IRR-controls,
+.a-IRR-controlsContainer,
+.a-IRR-controlsContainer--fullView,
+.a-IRR-searchFieldContainer,
+.a-IRR-toolbar-searchContainer,
+.t-Report-wrap>.a-IRR-toolbar {
+    background-color: transparent !important;
+    background: transparent !important;
+    border-color: var(--dk-border-soft) !important;
+    color: var(--dk-text-body) !important;
+}
+
+/* Search field, selects and buttons inside the toolbar */
+.a-IRR-search-field,
+.a-IRR-toolbar input[type="text"],
+.a-IRR-toolbar select,
+.a-IRR-controlsContainer input[type="text"],
+.a-IRR-controlsContainer select {
+    background-color: var(--dk-bg-input) !important;
+    border: 1px solid var(--dk-border-input) !important;
+    color: var(--dk-text) !important;
+    border-radius: 8px !important;
+}
+
+.a-IRR-search-field::placeholder {
+    color: var(--dk-text-nav) !important;
+}
+
+.a-IRR-button,
+.a-IRR-toolbar .a-Button,
+.a-IRR-toolbar .a-IRR-button,
+.a-IRR-controlsContainer .a-Button {
+    background-color: var(--dk-bg-input) !important;
+    border: 1px solid var(--dk-border-input) !important;
+    color: var(--dk-text) !important;
+    border-radius: 8px !important;
+}
+
+.a-IRR-button:hover,
+.a-IRR-toolbar .a-Button:hover,
+.a-IRR-controlsContainer .a-Button:hover {
+    background-color: rgba(56, 189, 248, 0.2) !important;
+}
+
+/* Search icon */
+.a-IRR-toolbar .a-Icon,
+.a-IRR-toolbar .fa,
+.a-IRR-search .a-Icon {
+    color: var(--dk-text-nav) !important;
+}
+
+/* Column headers */
+.a-IRR-header,
+.a-IRR-table th {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: var(--dk-text) !important;
+    font-weight: 600 !important;
+    border-color: var(--dk-border) !important;
+}
+
+.a-IRR-headerLink,
+.a-IRR-headerLink:visited {
+    color: var(--dk-text) !important;
+}
+
+/* Rows & cells */
+.a-IRR-table td {
+    background-color: transparent !important;
+    color: var(--dk-text-body) !important;
+    border-color: var(--dk-border-soft) !important;
+}
+
+.a-IRR-table tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.025) !important;
+}
+
+.a-IRR-table tr:hover td {
+    background-color: var(--dk-accent-hover) !important;
+}
+
+.a-IRR-table td a {
+    color: var(--dk-accent) !important;
+}
+
+.a-IRR-pagination-label,
+.a-IRR-reportSummary-label,
+.a-IRR-reportSummary-value {
+    color: var(--dk-text-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   9. INTERACTIVE GRIDS
+   -------------------------------------------------------------------------- */
+.a-IG,
+.a-GV,
+.a-GV-w-scroll,
+.a-GV-table,
+.a-GV-footer,
+.a-GV-pagination,
+.a-Toolbar {
+    background-color: transparent !important;
+    color: var(--dk-text-body) !important;
+    border-color: var(--dk-border) !important;
+}
+
+.a-GV-header,
+.a-GV-headerLabel {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: var(--dk-text) !important;
+    font-weight: 600 !important;
+    border-color: var(--dk-border) !important;
+}
+
+.a-GV-cell {
+    background-color: transparent !important;
+    color: var(--dk-text-body) !important;
+    border-color: var(--dk-border-soft) !important;
+}
+
+.a-GV-row:hover .a-GV-cell {
+    background-color: rgba(56, 189, 248, 0.10) !important;
+}
+
+.a-GV-row.is-selected .a-GV-cell,
+.a-GV-cell.is-focused {
+    background-color: rgba(56, 189, 248, 0.20) !important;
+}
+
+.a-GV-cell input,
+.a-GV-cell select {
+    background-color: var(--dk-bg-input-focus) !important;
+    color: var(--dk-text) !important;
+}
+
+/* --------------------------------------------------------------------------
+   10. MENUS, POPUPS, DIALOGS, DATE PICKER, ALERTS
+   -------------------------------------------------------------------------- */
+.a-Menu,
+.a-Menu-content,
+.ui-dialog,
+.ui-dialog-content,
+.ui-widget-content,
+.a-IRR-dialog,
+.a-IRR-dialogContent,
+.a-PopupLOV-dialog,
+.a-PopupLOV-results,
+.a-AutoComplete,
+.a-DatePicker,
+.ui-datepicker,
+.t-Dialog,
+.t-Dialog-body,
+.t-Dialog-page {
+    background-color: var(--dk-bg-panel) !important;
+    color: var(--dk-text-body) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.ui-dialog-titlebar,
+.t-Dialog-header,
+.a-DatePicker-header {
+    background-color: var(--dk-bg-nav) !important;
+    color: var(--dk-text) !important;
+    border-color: var(--dk-border) !important;
+}
+
+.a-Menu-label,
+.ui-dialog-title,
+.a-PopupLOV-item,
+.a-AutoComplete-item,
+.a-DatePicker-day,
+.a-DatePicker-weekday {
+    color: var(--dk-text-body) !important;
+}
+
+.a-Menu-item:hover>.a-Menu-label,
+.a-Menu-item.is-focused>.a-Menu-label,
+.a-PopupLOV-item:hover,
+.a-AutoComplete-item:hover,
+.a-DatePicker-day:hover {
+    background-color: rgba(56, 189, 248, 0.2) !important;
+    color: var(--dk-accent) !important;
+}
+
+.a-IRR-dialog .a-Form-label,
+.a-IRR-dialog label {
+    color: var(--dk-text-muted) !important;
+}
+
+.a-IRR-dialog input,
+.a-IRR-dialog select,
+.a-IRR-dialog textarea,
+.ui-dialog input,
+.ui-dialog select,
+.ui-dialog textarea {
+    background-color: var(--dk-bg-input) !important;
+    border: 1px solid var(--dk-border-input) !important;
+    color: var(--dk-text) !important;
+    border-radius: 8px !important;
+}
+
+.t-Alert {
+    background-color: var(--dk-bg-panel) !important;
+    color: var(--dk-text-body) !important;
+    border: 1px solid var(--dk-border) !important;
+}
+
+/* --------------------------------------------------------------------------
+   11. CHARTS (scoped to charts only; no longer touches every SVG on the page)
+   -------------------------------------------------------------------------- */
+.oj-chart-title-text,
+.oj-chart-subtitle-text,
+.oj-chart-xaxis-title,
+.oj-chart-yaxis-title,
+.oj-chart-slice-label,
+.oj-chart-data-label,
+.oj-chart-legend-item-text,
+.oj-axis-tick-label,
+.oj-chart svg text,
+.a-D3 svg text {
+    fill: var(--dk-text) !important;
+    color: var(--dk-text) !important;
+    font-family: var(--dk-font) !important;
+}
+
+.oj-chart-xaxis-line,
+.oj-chart-yaxis-line,
+.oj-chart-gridline,
+.oj-chart-major-tick,
+.oj-chart-minor-tick {
+    stroke: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* --------------------------------------------------------------------------
+   12. BADGES
+   Use with Column Formatting > HTML Expression on the status column:
+   <span class="os-badge os-badge--#ORDER_STATUS#">#ORDER_STATUS#</span>
+   Modifier names are case-sensitive and match the status values.
+   -------------------------------------------------------------------------- */
+.os-badge,
+.t-Badge {
+    display: inline-block !important;
+    border-radius: 20px !important;
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
+    padding: 5px 14px !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+}
+
+.os-badge--Shipped,
+.t-Badge--success {
+    background-color: rgba(16, 185, 129, 0.25) !important;
+    color: #34d399 !important;
+    border: 1px solid rgba(52, 211, 153, 0.4) !important;
+}
+
+.os-badge--Pending,
+.t-Badge--warning {
+    background-color: rgba(245, 158, 11, 0.25) !important;
+    color: #fbbf24 !important;
+    border: 1px solid rgba(251, 191, 36, 0.4) !important;
+}
+
+.os-badge--Canceled,
+.t-Badge--danger {
+    background-color: rgba(239, 68, 68, 0.25) !important;
+    color: #f87171 !important;
+    border: 1px solid rgba(248, 113, 113, 0.4) !important;
+}
+
+/* Fallback for any other status: neutral accent badge */
+.a-IRR-table td[headers="ORDER_STATUS"] .t-Badge:not([class*="t-Badge--"]) {
+    background-color: rgba(56, 189, 248, 0.2) !important;
+    color: var(--dk-accent) !important;
+    border: 1px solid rgba(56, 189, 248, 0.4) !important;
+}
+
+/* ==========================================================================
+   13. POPUPS, SEARCH SUGGESTIONS, COLUMN FILTERS, HIDDEN BUTTONS (round 2)
+   Strategy: style by ARIA role and by native colour-scheme as well as by
+   class, because APEX popup class names differ between versions.
+   ========================================================================== */
+
+/* Makes native controls (scrollbars, checkboxes, date inputs) render dark */
+:root {
+    color-scheme: dark;
+}
+
+/* ---- 13a. Popup containers (search suggestions, column filter, LOVs) ---- */
+[role="dialog"],
+[role="listbox"],
+[role="menu"],
+[role="tooltip"],
+.ui-front.ui-widget-content,
+.a-Popup,
+.a-Popup-content,
+.a-IRR-popup,
+.a-IRR-searchPopup,
+.a-IRR-searchSuggestions,
+.a-IRR-quickActions,
+.a-IRR-filterPopup,
+.a-IRR-columnFilter,
+.a-IRR-headerFilter,
+.a-IRR-filter,
+.a-GV-columnFilter,
+.a-GV-popup,
+.a-PopupLOV,
+.a-PopupLOV-list,
+.a-Menu-content,
+.a-Menu--popup {
+    background-color: var(--dk-bg-panel) !important;
+    background-image: none !important;
+    color: var(--dk-text-body) !important;
+    border: 1px solid var(--dk-border-input) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55) !important;
+    color-scheme: dark;
+}
+
+/* Text, labels and list rows inside those popups */
+:is([role="dialog"], [role="listbox"], [role="menu"], .a-Popup, .a-IRR-popup,
+    .a-IRR-searchPopup, .a-IRR-quickActions, .a-IRR-filterPopup,
+    .a-IRR-columnFilter, .a-IRR-headerFilter, .a-GV-columnFilter, .a-PopupLOV) :is(label, span, p, div, li, a, h1, h2, h3, h4, h5, h6) {
+    color: inherit !important;
+}
+
+/* Descriptions and section titles ("Quick Actions", "Create a saved chart...") */
+:is([role="dialog"], [role="listbox"], [role="menu"], .a-IRR-popup, .a-IRR-searchPopup,
+    .a-IRR-quickActions) :is(small, .a-IRR-description, [class*="description"], [class*="subtitle"], [class*="heading"]) {
+    color: var(--dk-text-nav) !important;
+}
+
+/* Row separators and hover */
+:is([role="listbox"], [role="menu"], .a-IRR-quickActions, .a-IRR-searchPopup) :is([role="option"], [role="menuitem"], li) {
+    background-color: transparent !important;
+    border-color: var(--dk-border-soft) !important;
+}
+
+:is([role="listbox"], [role="menu"], .a-IRR-quickActions, .a-IRR-searchPopup) :is([role="option"], [role="menuitem"], li):is(:hover, :focus, .is-focused, .is-hover, [aria-selected="true"]) {
+    background-color: rgba(56, 189, 248, 0.18) !important;
+    color: var(--dk-accent) !important;
+}
+
+/* Icons inside popups */
+:is([role="dialog"], [role="listbox"], [role="menu"], .a-IRR-popup, .a-IRR-quickActions) :is(.a-Icon, .fa, svg, [class*="icon-"]) {
+    color: var(--dk-text-nav) !important;
+    fill: currentColor;
+}
+
+/* ---- 13b. Search / filter inputs inside popups ---- */
+:is([role="dialog"], [role="listbox"], [role="menu"], .a-Popup, .a-IRR-popup, .a-IRR-filterPopup,
+    .a-IRR-columnFilter, .a-IRR-headerFilter, .a-GV-columnFilter, .a-PopupLOV) :is(input[type="text"], input[type="search"], input:not([type]), select, textarea) {
+    background-color: var(--dk-bg-input) !important;
+    border: 1px solid var(--dk-border-input) !important;
+    color: var(--dk-text) !important;
+    border-radius: 8px !important;
+}
+
+:is([role="dialog"], [role="listbox"], .a-IRR-popup, .a-IRR-filterPopup, .a-IRR-columnFilter,
+    .a-IRR-headerFilter, .a-GV-columnFilter) input::placeholder {
+    color: var(--dk-text-nav) !important;
+}
+
+/* ---- 13c. Checkboxes and radios (labels were white on white) ---- */
+:is([role="dialog"], [role="listbox"], .a-IRR-popup, .a-IRR-filterPopup, .a-IRR-columnFilter,
+    .a-IRR-headerFilter, .a-GV-columnFilter, .a-PopupLOV) :is(input[type="checkbox"], input[type="radio"]) {
+    accent-color: var(--dk-accent);
+}
+
+/* APEX draws custom checkbox boxes with pseudo-elements on the label */
+:is([role="dialog"], [role="listbox"], .a-IRR-popup, .a-IRR-filterPopup, .a-IRR-columnFilter,
+    .a-IRR-headerFilter, .a-GV-columnFilter) :is(.apex-item-checkbox, .apex-item-radio, .a-Checkbox, .a-Radio) label::before,
+:is([role="dialog"], [role="listbox"], .a-IRR-popup, .a-IRR-filterPopup, .a-IRR-columnFilter,
+    .a-IRR-headerFilter, .a-GV-columnFilter) :is(.apex-item-checkbox, .apex-item-radio, .a-Checkbox, .a-Radio) span::before {
+    background-color: var(--dk-bg-input) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* ---- 13d. Chips / toggle buttons in the search popup (All, Order Id ...) ---- */
+:is([role="dialog"], [role="listbox"], .a-IRR-popup, .a-IRR-searchPopup, .a-IRR-quickActions) :is(button, [role="button"], [role="tab"], [class*="chip"], [class*="Chip"], [class*="pill"]) {
+    background-color: var(--dk-bg-input) !important;
+    border: 1px solid var(--dk-border-input) !important;
+    color: var(--dk-text-body) !important;
+}
+
+:is([role="dialog"], [role="listbox"], .a-IRR-popup, .a-IRR-searchPopup, .a-IRR-quickActions) :is(button, [role="button"], [role="tab"], [class*="chip"], [class*="Chip"], [class*="pill"]):is(.is-active, .is-selected, [aria-pressed="true"], [aria-selected="true"], [aria-checked="true"]) {
+    background-color: rgba(56, 189, 248, 0.25) !important;
+    border-color: var(--dk-accent) !important;
+    color: var(--dk-accent) !important;
+}
+
+/* ---- 13e. Dividers and footers inside popups ---- */
+:is([role="dialog"], .a-IRR-popup, .a-IRR-filterPopup, .a-IRR-columnFilter, .a-IRR-headerFilter, .a-GV-columnFilter) :is(hr, [class*="footer"], [class*="Footer"], [class*="header"], [class*="Header"], [class*="toolbar"], [class*="Toolbar"]) {
+    background-color: transparent !important;
+    border-color: var(--dk-border-soft) !important;
+}
+
+/* ---- 13f. Hidden / near-invisible buttons ---------------------------------
+   Standard buttons kept the theme's dark text on the dark canvas, so they
+   disappeared (pagination, "Download", "Next", dialog Cancel buttons, etc.).
+   Hot (primary) buttons keep their blue gradient from section 7.
+   -------------------------------------------------------------------------- */
+.t-Button:not(.t-Button--hot):not(.t-Button--noUI):not(.t-Button--danger):not(.t-Button--success):not(.t-Button--warning),
+.a-Button:not(.a-Button--hot):not(.a-Button--noUI),
+.a-IRR-button,
+.a-IRR-pagination .a-Button,
+.a-GV-pagination .a-Button,
+.t-Report-pagination .t-Button,
+.t-ButtonRegion .t-Button:not(.t-Button--hot) {
+    background-color: var(--dk-bg-input) !important;
+    border: 1px solid var(--dk-border-input) !important;
+    color: var(--dk-text) !important;
+    border-radius: 8px !important;
+    opacity: 1 !important;
+    transition: background-color 0.15s ease, border-color 0.15s ease !important;
+}
+
+.t-Button:not(.t-Button--hot):not(.t-Button--noUI):hover,
+.a-Button:not(.a-Button--hot):not(.a-Button--noUI):hover,
+.a-IRR-pagination .a-Button:hover,
+.a-GV-pagination .a-Button:hover {
+    background-color: rgba(56, 189, 248, 0.2) !important;
+    border-color: var(--dk-accent) !important;
+}
+
+/* Icon-only / "no UI" buttons: transparent but readable */
+.t-Button--noUI,
+.a-Button--noUI {
+    background: transparent !important;
+    border: none !important;
+    color: var(--dk-text-muted) !important;
+}
+
+.t-Button--noUI:hover,
+.a-Button--noUI:hover {
+    color: var(--dk-accent) !important;
+}
+
+/* Button labels and icons must follow the button's colour */
+.t-Button .t-Button-label,
+.t-Button .t-Icon,
+.t-Button .fa,
+.a-Button .a-Icon,
+.a-Button .fa {
+    color: inherit !important;
+}
+
+/* Disabled buttons: dim but still visible */
+.t-Button.is-disabled,
+.t-Button:disabled,
+.a-Button.is-disabled,
+.a-Button:disabled {
+    opacity: 0.45 !important;
+    color: var(--dk-text-nav) !important;
+}
+
+/* ==========================================================================
+   14. STOCK STATUS BADGES (Critical = red, Low = orange)
+   Column Formatting > HTML Expression on the Status column:
+   <span class="st-badge" data-status="#STATUS#">#STATUS#</span>
+   (replace STATUS with the column's alias if it differs)
+   The "i" flag makes the match case-insensitive, so Critical / CRITICAL /
+   critical all work, and values containing spaces are fine.
+   ========================================================================== */
+.st-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    border-radius: 20px !important;
+    padding: 5px 14px !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+    /* default for any status without its own colour: neutral blue */
+    background-color: rgba(56, 189, 248, 0.20) !important;
+    color: var(--dk-accent) !important;
+    border: 1px solid rgba(56, 189, 248, 0.40) !important;
+}
+
+/* Small status dot */
+.st-badge::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: currentColor;
+    flex: 0 0 auto;
+}
+
+.st-badge[data-status="Critical" i] {
+    background-color: rgba(239, 68, 68, 0.25) !important;
+    color: #f87171 !important;
+    border-color: rgba(248, 113, 113, 0.40) !important;
+}
+
+.st-badge[data-status="Low" i] {
+    background-color: rgba(249, 115, 22, 0.25) !important;
+    color: #fb923c !important;
+    border-color: rgba(251, 146, 60, 0.40) !important;
+}
+
+/* Optional: uncomment if you also have healthy stock rows
+.st-badge[data-status="OK" i],
+.st-badge[data-status="In Stock" i] {
+    background-color: rgba(16, 185, 129, 0.25) !important;
+    color: #34d399 !important;
+    border-color: rgba(52, 211, 153, 0.40) !important;
+}
+*/
+
+/* ==========================================================================
+   15. ORDER STATUS BADGES (case-insensitive, replaces the os-badge--X classes)
+   Column Formatting > HTML Expression on the ORDER_STATUS column:
+   <span class="os-badge" data-status="#ORDER_STATUS#">#ORDER_STATUS#</span>
+   Matches Shipped / SHIPPED / shipped, trailing spaces, and both
+   Canceled and Cancelled. Anything else gets the neutral blue badge.
+   ========================================================================== */
+.os-badge[data-status] {
+    background-color: rgba(56, 189, 248, 0.20) !important;
+    color: var(--dk-accent) !important;
+    border: 1px solid rgba(56, 189, 248, 0.40) !important;
+}
+
+.os-badge[data-status^="Shipped" i] {
+    background-color: rgba(16, 185, 129, 0.25) !important;
+    color: #34d399 !important;
+    border: 1px solid rgba(52, 211, 153, 0.40) !important;
+}
+
+.os-badge[data-status^="Pending" i] {
+    background-color: rgba(245, 158, 11, 0.25) !important;
+    color: #fbbf24 !important;
+    border: 1px solid rgba(251, 191, 36, 0.40) !important;
+}
+
+.os-badge[data-status^="Cancel" i] {
+    background-color: rgba(239, 68, 68, 0.25) !important;
+    color: #f87171 !important;
+    border: 1px solid rgba(248, 113, 113, 0.40) !important;
+}
+
+/* ==========================================================================
+   16. FLOATING-LABEL FORMS
+   The "Optional - Floating" label template places the label inside the field.
+   Earlier rules overrode its padding and gave the label a light background,
+   so labels overlapped the values. These rules give the label its own space.
+   ========================================================================== */
+.t-Form-fieldContainer--floatingLabel .t-Form-labelContainer,
+.t-Form-fieldContainer--floatingLabel .t-Form-label {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: var(--dk-text-nav) !important;
+}
+
+.t-Form-fieldContainer--floatingLabel.is-active .t-Form-label,
+.t-Form-fieldContainer--floatingLabel:focus-within .t-Form-label {
+    color: var(--dk-accent) !important;
+}
+
+.t-Form-fieldContainer--floatingLabel.t-Form-fieldContainer .t-Form-inputContainer:is(input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="file"]),
+    select, .apex-item-text, .apex-item-select, .apex-item-popup-lov, .apex-item-datepicker) {
+    padding: 24px 40px 8px 16px !important;
+    min-height: 60px !important;
+    line-height: 1.3 !important;
+}
+
+.t-Form-fieldContainer--floatingLabel.t-Form-fieldContainer .t-Form-inputContainer:is(textarea, .apex-item-textarea) {
+    padding: 26px 16px 10px 16px !important;
+    min-height: 110px !important;
+}
+
+/* ==========================================================================
+   17. FINAL FIXES
+   ========================================================================== */
+
+/* 17a. Grey bar behind floating labels (e.g. the Status select).
+   Clears the background on the label, its container, everything inside it
+   and their pseudo-elements, in every field state. */
+:is(.t-Form-fieldContainer--floatingLabel, [class*="floatingLabel"]) :is(label, .t-Form-labelContainer, .t-Form-label),
+:is(.t-Form-fieldContainer--floatingLabel, [class*="floatingLabel"]) :is(label, .t-Form-labelContainer, .t-Form-label)::before,
+:is(.t-Form-fieldContainer--floatingLabel, [class*="floatingLabel"]) :is(label, .t-Form-labelContainer, .t-Form-label)::after,
+:is(.t-Form-fieldContainer--floatingLabel, [class*="floatingLabel"]) .t-Form-labelContainer * {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+/* 17b. Native select dropdown (the open list of options) */
+select option,
+select optgroup,
+.apex-item-select option {
+    background-color: var(--dk-bg-panel) !important;
+    color: var(--dk-text) !important;
+}
+
+select option:checked,
+select option:hover,
+select option:focus,
+.apex-item-select option:checked,
+.apex-item-select option:hover {
+    background: linear-gradient(#2563eb, #2563eb) !important;
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+/* 17c. Report and grid headers: opaque so rows no longer show through the
+   sticky header when scrolling (this caused the overlapping "Customer Name"). */
+.a-IRR-header,
+.a-IRR-table th,
+.a-IRR-tableContainer thead th,
+.a-GV-header,
+.a-GV-headerLabel,
+.t-Report-colHead,
+.t-Report-report th {
+    background-color: #1a1f2b !important;
+}
