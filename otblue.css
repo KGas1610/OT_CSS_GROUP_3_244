@@ -1454,3 +1454,87 @@ select option:focus,
 .t-Report-report th {
     background-color: #1a1f2b !important;
 }
+
+/*Login Page */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+
+.t-PageBody--login,
+.t-Login-box,
+.t-Login-box input,
+.t-Login-box button,
+.t-Login-header,
+.t-Login-body,
+.t-Form-label {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+
+.t-PageBody--login {
+    background-image: linear-gradient(rgba(10, 15, 30, 0.75), rgba(10, 15, 30, 0.85)),
+        url('#APP_FILES#ot_background.jpeg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+
+.t-Login-container {
+    background: transparent !important;
+}
+
+.t-Login-box {
+    background: rgba(17, 24, 39, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+
+.t-Login-title {
+    font-weight: 800 !important;
+    letter-spacing: -0.5px !important;
+    color: #000000 !important;
+}
+
+
+.t-Form-label {
+    font-weight: 500 !important;
+    color: #9ca3af !important;
+    letter-spacing: 0.3px !important;
+}
+
+
+.t-Login-box .apex-item-text,
+.t-Login-box .apex-item-password {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.2px !important;
+}
+
+.t-Login-box .apex-item-text:focus,
+.t-Login-box .apex-item-password:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3) !important;
+}
+
+
+.t-Login-box .t-Button--hot {
+    background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.t-Login-box .t-Button--hot:hover {
+    background: linear-gradient(90deg, #1d4ed8 0%, #1e40af 100%) !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4) !important;
+}
