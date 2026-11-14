@@ -1,0 +1,504 @@
+/*old css OT Website*/
+
+/*Gobal Styles*/
+/* GLOBAL FONT & TYPEFACE SYSTEM */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+html,
+body,
+input,
+select,
+textarea,
+button,
+.t-Body,
+.t-Header,
+.t-Header-title,
+.t-Header-logoText,
+.t-NavigationBar-link,
+.t-Button,
+.a-Button,
+.t-Region,
+.t-Region-title,
+.t-Form-label,
+.t-Form-inputContainer input,
+.t-Form-inputContainer select,
+.apex-item-text,
+.apex-item-textarea,
+.apex-item-select,
+.apex-item-popup-lov,
+.a-TreeView-label,
+.a-CardView-title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.t-HeroRegion-title,
+.t-Body-title,
+
+/* Interactive Reports */
+.a-IRR,
+.a-IRR-table,
+.a-IRR-header,
+.a-IRR-headerLink,
+.a-IRR-pagination-label,
+.a-IRR-controlsContainer,
+.a-IRR-search-field,
+.a-IRR-button,
+.a-IRR-sortWidget,
+.a-IRR-fullView,
+.a-IRR-noDataMsg,
+.a-IRR-reportSummary,
+.a-IRR-dialog,
+.a-IRR-dialogContent,
+
+/* Interactive Grids */
+.a-IG,
+.a-GV,
+.a-GV-table,
+.a-GV-headerLabel,
+.a-GV-cell,
+.a-GV-pagination,
+.a-GV-footer,
+.a-Toolbar,
+.a-Toolbar-item,
+.a-Toolbar-label,
+
+/* Menus, popups, dialogs */
+.a-Menu,
+.a-Menu-label,
+.a-Menu-item,
+.ui-dialog,
+.ui-dialog-title,
+.ui-widget {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* GLOBAL CANVAS & HEADER BACKGROUNDS */
+body,
+.t-PageBody,
+.t-Body-main,
+.t-Body-content,
+.t-Body-top,
+.t-Body-title,
+.t-BreadcrumbRegion,
+.t-BreadcrumbRegion-body,
+.t-PageBody-header,
+.t-Region-body {
+    background-color: #0b0f19 !important;
+    background: #0b0f19 !important;
+    color: #ffffff !important;
+}
+
+/* Header Bar & Branding Container */
+.t-Header,
+.t-Header-branding,
+.t-Header-nav,
+.t-Header-title {
+    background-color: #0b0f19 !important;
+    background: #0b0f19 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Header Titles & Breadcrumbs Text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.t-Header-title h1,
+.t-Header-logoText,
+.t-Breadcrumb-title,
+.t-Breadcrumb-item,
+.t-Breadcrumb-label {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* NAVIGATION BAR */
+.t-Body-nav,
+.a-TreeView,
+.a-TreeView-node,
+.a-TreeView-content {
+    background-color: #0d1322 !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.a-TreeView-label,
+.a-TreeView-rowHeader {
+    color: #9ca3af !important;
+    font-weight: 600 !important;
+}
+
+.a-TreeView-node:hover .a-TreeView-content,
+.a-TreeView-node.is-selected>.a-TreeView-content {
+    background-color: rgba(56, 189, 248, 0.15) !important;
+    color: #38bdf8 !important;
+    border-radius: 6px !important;
+}
+
+.a-TreeView-node.is-selected .a-TreeView-label,
+.a-TreeView-node.is-selected .fa {
+    color: #38bdf8 !important;
+}
+
+/* CARDS & REGION CONTAINERS */
+.t-Region,
+.t-Card {
+    background-color: rgba(17, 24, 39, 0.85) !important;
+    background: rgba(17, 24, 39, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+    margin-top: 16px !important;
+    margin-bottom: 24px !important;
+    overflow: hidden !important;
+}
+
+.t-Region-header {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 16px 24px !important;
+}
+
+.t-Region-title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+}
+
+/* FORM INPUT CONTROLS & LABELS */
+.t-Form-fieldContainer {
+    margin-bottom: 20px !important;
+}
+
+.t-Form-labelContainer {
+    padding-bottom: 6px !important;
+    display: block !important;
+    float: none !important;
+    text-align: left !important;
+}
+
+.t-Form-label {
+    color: #cbd5e1 !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+.is-required .t-Form-label::before {
+    color: #f43f5e !important;
+}
+
+.t-Form-inputContainer,
+.t-Form-fieldContainer,
+.apex-item-wrapper,
+.apex-item-select,
+.apex-item-popup-lov,
+.t-Form-inputContainer input,
+.t-Form-inputContainer select {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.t-Form-inputContainer input[type="text"],
+.t-Form-inputContainer input[type="number"],
+.t-Form-inputContainer select,
+.apex-item-select,
+.apex-item-popup-lov {
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    font-size: 0.95rem !important;
+    min-height: 46px !important;
+}
+
+.t-Form-inputContainer input:focus,
+.t-Form-inputContainer select:focus,
+.apex-item-popup-lov:focus {
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
+    outline: none !important;
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    color: #ffffff !important;
+}
+
+.t-Form-inputContainer select option {
+    background-color: #111827 !important;
+    color: #ffffff !important;
+}
+
+/* CHARTS: WHITE LABELS, TICK VALUES & GRIDLINES */
+.oj-chart-title-text,
+.oj-chart-subtitle-text,
+.oj-chart-xaxis-title,
+.oj-chart-yaxis-title,
+.oj-chart-slice-label,
+.oj-chart-data-label,
+.oj-chart-legend-item-text,
+.oj-axis-tick-label,
+svg text {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.oj-chart-xaxis-line,
+.oj-chart-yaxis-line,
+.oj-chart-gridline,
+.oj-chart-major-tick,
+.oj-chart-minor-tick {
+    stroke: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* BUTTONS */
+.t-Button--hot {
+    background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    padding: 12px 28px !important;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35) !important;
+}
+
+.t-Button--hot:hover {
+    background: linear-gradient(90deg, #1d4ed8 0%, #1e40af 100%) !important;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* INTERACTIVE REPORTS */
+.a-IRR,
+.a-IRR-container,
+.a-IRR-tableContainer,
+.a-IRR-table,
+.a-IRR-controlsContainer,
+.a-IRR-reportSummary,
+.a-IRR-pagination,
+.a-IRR-noDataMsg {
+    background-color: transparent !important;
+    color: #e5e7eb !important;
+}
+
+/* Column headers */
+.a-IRR-header,
+.a-IRR-table th {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.a-IRR-headerLink,
+.a-IRR-headerLink:visited {
+    color: #ffffff !important;
+}
+
+/* Rows & cells */
+.a-IRR-table td {
+    background-color: transparent !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.a-IRR-table tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.025) !important;
+}
+
+.a-IRR-table tr:hover td {
+    background-color: rgba(56, 189, 248, 0.12) !important;
+}
+
+.a-IRR-table td a {
+    color: #38bdf8 !important;
+}
+
+/* Search bar, Go button, pagination, summary text */
+.a-IRR-search-field,
+.a-IRR-controlsContainer input[type="text"],
+.a-IRR-controlsContainer select {
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+}
+
+.a-IRR-button,
+.a-IRR-controlsContainer .a-Button {
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+}
+
+.a-IRR-button:hover,
+.a-IRR-controlsContainer .a-Button:hover {
+    background-color: rgba(56, 189, 248, 0.2) !important;
+}
+
+.a-IRR-pagination-label,
+.a-IRR-reportSummary-label,
+.a-IRR-reportSummary-value {
+    color: #cbd5e1 !important;
+}
+
+/* INTERACTIVE GRIDS */
+.a-IG,
+.a-GV,
+.a-GV-w-scroll,
+.a-GV-table,
+.a-GV-footer,
+.a-GV-pagination,
+.a-Toolbar {
+    background-color: transparent !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.a-GV-header,
+.a-GV-headerLabel {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.a-GV-cell {
+    background-color: transparent !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.a-GV-row:hover .a-GV-cell {
+    background-color: rgba(56, 189, 248, 0.1) !important;
+}
+
+.a-GV-row.is-selected .a-GV-cell,
+.a-GV-cell.is-focused {
+    background-color: rgba(56, 189, 248, 0.2) !important;
+}
+
+.a-GV-cell input,
+.a-GV-cell select {
+    background-color: rgba(30, 41, 59, 0.95) !important;
+    color: #ffffff !important;
+}
+
+/* MENUS, POPUPS & DIALOGS */
+.a-Menu,
+.a-Menu-content,
+.ui-dialog,
+.ui-dialog-content,
+.ui-widget-content,
+.a-IRR-dialog,
+.a-IRR-dialogContent {
+    background-color: #111827 !important;
+    color: #e5e7eb !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.ui-dialog-titlebar {
+    background-color: #0d1322 !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.a-Menu-label,
+.ui-dialog-title {
+    color: #e5e7eb !important;
+}
+
+.a-Menu-item:hover>.a-Menu-label,
+.a-Menu-item.is-focused>.a-Menu-label {
+    background-color: rgba(56, 189, 248, 0.2) !important;
+    color: #38bdf8 !important;
+}
+
+.a-IRR-dialog .a-Form-label,
+.a-IRR-dialog label {
+    color: #cbd5e1 !important;
+}
+
+.a-IRR-dialog input,
+.a-IRR-dialog select,
+.a-IRR-dialog textarea,
+.ui-dialog input,
+.ui-dialog select,
+.ui-dialog textarea {
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+}
+
+/* ==========================================================================
+   NATIVE APEX BADGE STYLING (STANDARD CSS COMPLIANT)
+   ========================================================================== */
+
+/* Base Badge Pill Layout */
+.a-IRR-table .t-Badge,
+.t-Badge {
+    border-radius: 20px !important;
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
+    padding: 5px 14px !important;
+    letter-spacing: 0.5px !important;
+    display: inline-block !important;
+    text-transform: uppercase !important;
+}
+
+/* 1. APEX Template Modifier Classes (Native Badge Styling) */
+.t-Badge--success,
+.t-Badge--completed {
+    background-color: rgba(16, 185, 129, 0.25) !important;
+    color: #34d399 !important;
+    border: 1px solid rgba(52, 211, 153, 0.4) !important;
+}
+
+.t-Badge--warning,
+.t-Badge--pending {
+    background-color: rgba(245, 158, 11, 0.25) !important;
+    color: #fbbf24 !important;
+    border: 1px solid rgba(251, 191, 36, 0.4) !important;
+}
+
+.t-Badge--danger,
+.t-Badge--error,
+.t-Badge--canceled {
+    background-color: rgba(239, 68, 68, 0.25) !important;
+    color: #f87171 !important;
+    border: 1px solid rgba(248, 113, 113, 0.4) !important;
+}
+
+/* 2. Interactive Report Column Data Attribute Match (Fallback) */
+.a-IRR-table td[data-series="ORDER_STATUS"] .t-Badge {
+    background-color: rgba(56, 189, 248, 0.2) !important;
+    color: #38bdf8 !important;
+    border: 1px solid rgba(56, 189, 248, 0.4) !important;
+}
+
+/* Fix Classic Report / Interactive Grid Header Backgrounds */
+.t-Report-report th,
+.a-IRR-header,
+.a-IRR-table th,
+.a-GV-header {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.t-Report-headerLink,
+.a-IRR-headerLink {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
